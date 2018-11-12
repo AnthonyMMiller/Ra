@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  position: relative;
+  /* position: relative; */
   margin: 0;
   /* padding-bottom: 6rem; */
   min-height: 100%;
@@ -26,36 +26,15 @@ body {
 }
 
 
-
- a {
-     color: white;
- }
   
- a:hover {
-     color: #feda6a;
- }
 
- .myfooter {
-
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #1d1e22;
-  color: white;
-  text-align: left;
-  padding: 20px;
-  font-size: x-small;
-}
-.myheader {
-  background-color: #1d1e22;
-}
 
 .parallax {
   /* The image used */
   background-image: url("/styles/imgs/ra.png");
 
   /* Set a specific height */
-  min-height: 700px; 
+  min-height: 750px; 
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -68,33 +47,15 @@ body {
 
 
 .about {
-  height:700px;
+  /* height:1000px; */
   /* background-color:#7e7a5b; */
   background-color: white;
   font-size:36px;
+  padding: 100px;
+  padding-bottom: 300px;
  
 }
 
-.headertext {
-  color: rgb(0, 0, 0);
-}
-
-
-.contact {
-
-  margin-top: 8.5%;
-}
-
-.text {
-    color: black;
-    font-size: large;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-.mysubmit {
-    background-color:#1d1e22;
-    color: white
-}
 
 .headers {
   color: black;
@@ -104,10 +65,7 @@ font-weight: 400;
 line-height: 1.6;
 }
 
-.abouttxt {
-margin-top: 5%;
 
-}
 
 .ra {
   font-family: 'Sorts Mill Goudy', serif;
@@ -118,4 +76,20 @@ margin-top: 5%;
   line-height: 1.0;
   /* position: fixed; */
   
+}
+
+.head {
+  position: fixed;
+  margin-top: 20px;
+
+  color: black;
+ 
+  text-align: center;
+  font-size: large;
+
+}
+
+.aboutapp {
+  text-align: center;
+  font-size: xx-large;
 }

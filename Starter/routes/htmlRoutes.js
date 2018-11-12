@@ -12,9 +12,9 @@ module.exports = function(app) {
   });
 
   // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
+  app.get("/signin", function(req, res) {
+    db.Example.findOne({}).then(function(dbExample) {
+      res.render("signin", {
         example: dbExample
       });
     });
