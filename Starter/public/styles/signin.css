@@ -4,8 +4,8 @@ body {
     background-size: cover;
     /* font-family: Roboto, sans-serif; */
     font-family: 'Sorts Mill Goudy', serif;
-    
-    font-size: 100%; // 16px
+    font-size: 100%; 
+    position: relative;
   }
   .login {
     max-width: 400px;

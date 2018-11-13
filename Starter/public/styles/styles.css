@@ -26,12 +26,24 @@ body {
 }
 
 
-  
-
-
 .parallax {
   /* The image used */
   background-image: url("/styles/imgs/ra.png");
+
+  /* Set a specific height */
+  min-height: 750px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+}
+
+.parallaxu {
+  /* The image used */
+  background-image: url("/styles/imgs/u.jpeg");
 
   /* Set a specific height */
   min-height: 750px; 
@@ -92,4 +104,25 @@ line-height: 1.6;
 .aboutapp {
   text-align: center;
   font-size: xx-large;
+}
+
+.sun1 {
+
+  font-size: 30px;
+  color: rgb(255, 200, 80);
+  margin-right: 10px;
+}
+
+a {
+  color:rgb(255, 200, 80);
+}
+a:hover { 
+  color: rgb(255, 200, 80);
+  font-size: x-large;
+}
+
+.myfooter {
+ margin-left: 45%;
+  position: absolute;
+  bottom: 0%;
 }

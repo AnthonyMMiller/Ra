@@ -6,7 +6,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
    <link rel="stylesheet" href="/styles/signin.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="/styles/user.css" media="screen" title="no title" charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Sorts+Mill+Goudy:400,400i" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
   <title>Home Page</title>
 </head>
 
@@ -14,28 +19,25 @@
   <div class="container">
     <div class="row">
       <div class="col-6 offset-6 head">
-      {{!-- <button type="button" class="btn btn-light">About</button>
-      <button type="button" class="btn btn-light">Log in</button> --}}
-      <div class="btn-group btn-group-toggle" data-toggle="buttons">
-         <label class="btn btn-secondary btn-light">
-    <input type="radio" name="options" id="option2" autocomplete="off" onclick="location.href = '/'"> Home
-  </label>
-  <label class="btn btn-secondary btn-light">
-    <input type="radio" name="options" id="option1" autocomplete="off" > About
-  </label>
-  <label class="btn btn-secondary btn-light">
-    <input type="radio" name="options" id="option2" autocomplete="off" onclick="location.href = '/signin'"> Login
-  </label>
-  
+
+
+  <button type="button" class="btn btn-light" onclick="location.href = '/'">Home</button>
+  <button type="button" class="btn btn-light" onclick="location.href = '/signin'">Log in</button>
  
 </div>
       </div>
     </div>
-  </div>
-  </div>
+ 
+ 
   {{{body}}}
+
+<nav class="navbar myfooter">
+       <i class="fas fa-sun fa-spin sun1"></i>
+  <a class="navbar-brand" href="#">Github</a>
+
+</nav>
+
 </body>
-{{!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> --}}
+
+
 </html>
