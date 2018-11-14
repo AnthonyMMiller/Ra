@@ -1,3 +1,133 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+/* font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Oxygen', sans-serif; */
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  /* position: relative; */
+  margin: 0;
+  /* padding-bottom: 6rem; */
+  min-height: 100%;
+  font-family: 'Sorts Mill Goudy', serif;
+  color: black;
+}
+
+
+.parallax {
+  /* The image used */
+  background-image: url("/styles/imgs/ra.png");
+
+  /* Set a specific height */
+  min-height: 750px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+}
+
+.parallaxu {
+  /* The image used */
+  background-image: url("/styles/imgs/u.jpeg");
+
+  /* Set a specific height */
+  min-height: 750px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+}
+
+
+
+.about {
+  /* height:1000px; */
+  /* background-color:#7e7a5b; */
+  background-color: white;
+  font-size:36px;
+  padding: 100px;
+  padding-bottom: 300px;
+ 
+}
+
+
+.headers {
+  color: black;
+  font-size: large;
+font-family: 'Sorts Mill Goudy', serif;
+font-weight: 400;
+line-height: 1.6;
+}
+
+
+
+.ra {
+  font-family: 'Sorts Mill Goudy', serif;
+  margin-top: 200px;
+  color: white;
+  font-size: 112px;
+  font-weight: 450;
+  line-height: 1.0;
+  /* position: fixed; */
+  
+}
+
+.head {
+  position: fixed;
+  margin-top: 20px;
+
+  color: black;
+ 
+  text-align: center;
+  font-size: large;
+
+}
+
+.aboutapp {
+  text-align: center;
+  font-size: xx-large;
+}
+
+.sun1 {
+
+  font-size: 150px;
+  color: #f0803b;
+  margin-right: 10px;
+  margin-bottom: 40px;
+}
+
+a {
+  color:rgb(0, 0, 0);
+}
+a:hover { 
+  color: rgb(0, 0, 0);
+  font-size: x-large;
+}
+
+.myfooter {
+ margin-left: 45%;
+  position: absolute;
+  bottom: 0%;
+}
+
+.mybutton {
+  background-color: #f0803b;
+}
