@@ -108,16 +108,17 @@ line-height: 1.6;
 
 .sun1 {
 
-  font-size: 30px;
-  color: rgb(255, 200, 80);
+  font-size: 150px;
+  color: #f0803b;
   margin-right: 10px;
+  margin-bottom: 40px;
 }
 
 a {
-  color:rgb(255, 200, 80);
+  color:rgb(0, 0, 0);
 }
 a:hover { 
-  color: rgb(255, 200, 80);
+  color: rgb(0, 0, 0);
   font-size: x-large;
 }
 
@@ -125,4 +126,8 @@ a:hover {
  margin-left: 45%;
   position: absolute;
   bottom: 0%;
+}
+
+.mybutton {
+  background-color: #f0803b;
 }
