@@ -1,11 +1,14 @@
 
 <section class="login">
   <h1 class="login__title">Sign in</h1>
-  <form action="" class="form">
-    <input class="form__input" type="email" placeholder="Your email" />
+  <form action="/auth/signin" method="POST" class="form">
+    <input class="form__input" type="text" placeholder="Your email" />
     <input class="form__input" type="password" placeholder="Your password" />
-    <button class="form__submit" onclick="location.href = '/user'">GO</button>
+   <!-- <button class="form__submit" onclick="location.href = '/user'">GO</button> -->
+    <button type="submit">GO</button>
   </form>
+   <form name="signInForm" action="/auth/signout" method="get">
+                <input type="submit" value="Sign Out" />
   <a href="#" class="login__action login__action--normal">Need help?</a>
   <a href="#" class="login__action">Sign up</a>
 </section>
