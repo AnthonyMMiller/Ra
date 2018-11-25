@@ -39,7 +39,7 @@ getTodos();
 
 // This function resets the todos displayed with new todos from the database
 function initializeRows() {
-  $feelingsList.empty();
+  $exampleList.empty();
   var rowsToAdd = [];
   for (var i = 0; i < todos.length; i++) {
     rowsToAdd.push(createNewRow(todos[i]));
@@ -53,6 +53,29 @@ function getTodos() {
     todos = data;
     initializeRows();
   });
+}
+
+function createNewRow(todo) {
+  var $newInputRow = $(
+    [
+      "<li class='list-group-item todo-item'>",
+      "<span>",
+      todo.feeling,
+      "</span>",
+      // "<input type='text' class='edit' style='display: none;'>",
+      // "<button class='delete btn btn-danger'>x</button>",
+      // "<button class='complete btn btn-primary'>✓</button>",
+      // "</li>"
+    ].join("")
+  );
+
+  $newInputRow.find("button.delete").data("id", todo.id);
+  $newInputRow.find("input.edit").css("display", "none");
+  $newInputRow.data("todo", todo);
+  if (todo.complete) {
+    $newInputRow.find("span").css("text-decoration", "line-through");
+  }
+  return $newInputRow;
 }
 
 // refreshExamples gets new examples from the db and repopulates the list
