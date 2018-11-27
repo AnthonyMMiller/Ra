@@ -115,7 +115,7 @@ var handleFormSubmit = function(event) {
 
   var example = {
     feeling: $exampleText.val().trim(),
-    //description: $exampleDescription.val().trim()
+    // nasaData: $
   };
 console.log(example.feeling);
 
