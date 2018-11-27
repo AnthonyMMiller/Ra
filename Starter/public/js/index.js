@@ -78,59 +78,22 @@ function createNewRow(todo) {
   return $newInputRow;
 }
 
-// refreshExamples gets new examples from the db and repopulates the list
-// var refreshExamples = function() {
-//   API.getExamples().then(function(data) {
-//     var $examples = data.map(function(UserFeelings) {
-//       var $a = $("<a>")
-//         .text(UserFeelings.text)
-//         .attr("href", "/user/" + example.id);
-
-//       var $li = $("<li>")
-//         .attr({
-//           class: "list-group-item",
-//           "data-id": UserFeelings.id
-//         })
-//         .append($a);
-
-//       var $button = $("<button>")
-//         .addClass("btn btn-danger float-right delete")
-//         .text("ｘ");
-
-//       $li.append($button);
-
-//       return $li;
-//     });
-
-//     $exampleList.empty();
-//     $exampleList.append($examples);
-//   });
-// };
-
-// handleFormSubmit is called whenever we submit a new example
-// Save the new example to the db and refresh the list
 var handleFormSubmit = function(event) {
   event.preventDefault();
   
 
   var example = {
     feeling: $exampleText.val().trim(),
-    // nasaData: $
+    // nasaData: solarSearch
   };
 console.log(example.feeling);
+console.log(example.nasaData);
 
-  /*if (!(example.text && example.description)) {
-    alert("You must enter an example text and description!");
-    return;
-  }*/
 
   API.saveExample(example).then(function() {
     refreshExamples();
   });
 
-  // API.getExamples().then(function(){
-  //   refreshExamples();
-  // })
 
   $exampleText.val("");
   $exampleDescription.val("");
@@ -138,15 +101,6 @@ console.log(example.feeling);
 };
 
 
-
-
-
-
-
-
-
-// handleDeleteBtnClick is called when an example's delete button is clicked
-// Remove the example from the db and refresh the list
 var handleDeleteBtnClick = function() {
   var idToDelete = $(this)
     .parent()

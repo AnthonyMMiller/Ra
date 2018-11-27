@@ -9,20 +9,20 @@ let eYear = dateObj.getUTCFullYear();
 let key = "eS6qfDZDKtwmh83Q5oGPjIyiUL3so4NOGVV2ixSH";
 const solarSearch = "https://api.nasa.gov/DONKI/FLR?startDate=" + sYear + '-' + sMonth + '-' + sDay + "&endDate=" + eYear + '-' + eMonth + '-' + eDay + "&api_key=" + key;
 
-//Require
+// Require
 var request = require('request');
 const cron = require('node-cron');
 const express = require('express');
 let app = express();
 let fs = require('fs');
 
-//Connection to database
+// Connection to database
 let mysql = require('mysql');
 const con = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: '',
-  database: 'ra_db'
+  password: '229535Jkz',
+  database: 'RaUser'
 });
 
 con.connect(function (err) {
@@ -50,13 +50,13 @@ nasaSearch = function () {
     });
 
     // Cron job for checking nasa API for new objects once a day
-    cron.schedule('0 1 * * *', () => {
-      console.log('Runing a job at 01:00 at America/Los_Angeles');
-      nasaSearch();
-    }, {
-      scheduled: true,
-      timezone: "America/Los_Angeles"
-    });
+    // cron.schedule('0 1 * * *', () => {
+    //   console.log('Runing a job at 01:00 at America/Los_Angeles');
+    //   nasaSearch();
+    // }, {
+    //   scheduled: true,
+    //   timezone: "America/Los_Angeles"
+    // });
 
 
   })
@@ -69,11 +69,13 @@ $.get(solarSearch, function(data){
 });
 
 // Console log for checking api data
-//console.log(
-//  body[index].beginTime,
-//   body[index].endTime,
-//   body[index].peakTime,
-//    body[index].classType);
-//var index;
-//for (index = 0; index < body.length; ++index) {
+console.log(
+ body[index].beginTime,
+  body[index].endTime,
+  body[index].peakTime,
+   body[index].classType);
+
+
+
+
 
