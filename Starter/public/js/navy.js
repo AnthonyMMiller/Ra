@@ -1,4 +1,5 @@
 // Global variables
+
 let sYear = "2018";
 let sMonth = "01";
 let sDay = "01";
@@ -59,7 +60,7 @@ navySearch = function () {
     timezone: "America/Los_Angeles"
   });
 };
-
+ 
 // Console log for checking api data
 /* var index;
    for (index = 0; index < body.length; ++index) {
@@ -70,3 +71,4 @@ navySearch = function () {
        body[index].classType
        );
  };  */
+

@@ -10,7 +10,7 @@ let key = "eS6qfDZDKtwmh83Q5oGPjIyiUL3so4NOGVV2ixSH";
 const solarSearch = "https://api.nasa.gov/DONKI/FLR?startDate=" + sYear + '-' + sMonth + '-' + sDay + "&endDate=" + eYear + '-' + eMonth + '-' + eDay + "&api_key=" + key;
 
 //Require
-const request = require('request');
+var request = require('request');
 const cron = require('node-cron');
 const express = require('express');
 let app = express();
@@ -62,6 +62,11 @@ nasaSearch = function () {
   })
 };
 
+//nasaSearch();
+
+$.get(solarSearch, function(data){
+  console.log(data)
+});
 
 // Console log for checking api data
 //console.log(
@@ -71,3 +76,4 @@ nasaSearch = function () {
 //    body[index].classType);
 //var index;
 //for (index = 0; index < body.length; ++index) {
+
