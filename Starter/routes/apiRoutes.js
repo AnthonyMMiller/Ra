@@ -7,6 +7,19 @@ module.exports = function(app) {
       res.json(RaUser);
     });
   });
+    // Get all examples today
+    app.get("/api/today", function(req, res) {
+      db.UserFeeling.findAll({
+        where:{
+          createdAt: {
+            [db.Op.lt]: new Date(),
+            [db.Op.gt]: new Date(new Date() - 24 * 60 * 60 * 1000)
+          }
+        }
+      }).then(function(dbExamples) {
+        res.json(dbExamples);
+      });
+    });
 
   // Create a new example
   // app.post("/api/UserFeelings", function(req, res) {

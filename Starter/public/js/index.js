@@ -35,7 +35,7 @@ var API = {
 var todos = [];
 
 // Getting todos from database when page loads
-getTodos();
+//getTodos();
 
 // This function resets the todos displayed with new todos from the database
 function initializeRows() {
