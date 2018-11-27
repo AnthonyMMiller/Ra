@@ -17,13 +17,16 @@ html {
 }
 
 body {
-  /* position: relative; */
+  position: relative;
   margin: 0;
-  /* padding-bottom: 6rem; */
-  min-height: 100%;
+
+  height: 100%;
   font-family: 'Sorts Mill Goudy', serif;
   color: black;
+
 }
+
+
 
 
 /* .parallax { */
@@ -93,7 +96,7 @@ line-height: 1.6;
 }
 
 .head {
-  position: fixed;
+  /* position: fixed; */
   margin-top: 20px;
 
   color: black;
@@ -129,10 +132,10 @@ a:hover {
 }
 
 .myfooter {
-
- 
-  margin-bottom: 0%;
-  background-color: white;
+  text-align: center;
+  background-color: #f8f9fa;
+  padding: 10px;
+  
 }
 
 .mybutton {
@@ -185,4 +188,10 @@ a:hover {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
+}
+
+
+.biggerfont {
+  font-size: 20px;
+  z-index: 1;
 }
