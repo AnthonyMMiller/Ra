@@ -4,6 +4,19 @@ var $exampleDescription = $("#example-description");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
 
+
+
+let sYear = "2018";
+let sMonth = "01";
+let sDay = "01";
+let dateObj = new Date();
+let eMonth = dateObj.getUTCMonth() + 1; //months from 1-12
+let eDay = dateObj.getUTCDate();
+let eYear = dateObj.getUTCFullYear();
+let key = "eS6qfDZDKtwmh83Q5oGPjIyiUL3so4NOGVV2ixSH";
+const solarSearch = "https://api.nasa.gov/DONKI/FLR?startDate=" + sYear + '-' + sMonth + '-' + sDay + "&endDate=" + eYear + '-' + eMonth + '-' + eDay + "&api_key=" + key;
+
+
 var feelings = [];
 // The API object contains methods for each kind of request we'll make
 var API = {
@@ -89,14 +102,15 @@ var handleFormSubmit = function(event) {
     feeling: $exampleText.val().trim(),
     // nasaData: solarSearch
   };
-console.log(example.feeling);
-console.log(example.nasaData);
+console.log("index:" + example.feeling);
+// console.log(example.nasaData);
 
 
   API.saveExample(example).done(function() {
    // refreshExamples();
    // $exampleText.val("");
     //$exampleDescription.val("");
+    // Whatever();
     console.log("save example return")
     window.location.href = '/user';
 
@@ -122,7 +136,14 @@ var handleDeleteBtnClick = function() {
   });
 };
 
+
+
+
 // Add event listeners to the submit and delete buttons
-$('select').on('change',handleFormSubmit);
+
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
 
+
+
+$('select').on('change',handleFormSubmit);
+//$('select').on('change',Whatever);
