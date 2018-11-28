@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 function getUserFeelings() {
   $.get("/api/today", function(data) {
-    console.log(data)
+    // console.log(data)
     todos = data;
     GetData(data);
    
@@ -81,5 +81,49 @@ function getStats(feeling){
  });
   return data;
 }
+
+function Whatever() {
+  $.ajax({
+    url: solarSearch,
+    method: "GET"
+  })
+  
+  // After the data from the AJAX request comes back
+    .then(function(body) {
+  
+      // console.log(response);
+      var index;
+      for (index = 0; index < body.length; ++index) {
+        console.log(
+          body[index].beginTime,
+          body[index].endTime,
+          body[index].peakTime,
+          body[index].classType
+        
+          );
+          $("#nasa").append(body[index].beginTime + " <strong>- Begin Time </strong><p></p>");
+          $("#nasa").append(body[index].endTime + " <strong> - End Time<strong> <p></p>  ");
+          $("#nasa").append(body[index].peakTime + " <strong>- Peak Time <strong><p> </p>  ");
+          $("#nasa").append(body[index].classType + " <strong>- Class <strong><p> </p>  ");
+
+        }
+      
+  
+      // Creating and storing an image tag
+      // var catImage = $("<img>");
+  
+      // Setting the catImage src attribute to imageUrl
+      // catImage.attr("src", imageUrl);
+      // catImage.attr("alt", "cat image");
+  
+      // Prepending the catImage to the images div
+      // $("#images").prepend(catImage);
+    });
+  
+}
+
+Whatever();
+
+
 });
 

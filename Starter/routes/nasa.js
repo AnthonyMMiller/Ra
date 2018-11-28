@@ -1,15 +1,18 @@
 // Global variables
-let sYear = "2018";
-let sMonth = "01";
-let sDay = "01";
-let dateObj = new Date();
-let eMonth = dateObj.getUTCMonth() + 1; //months from 1-12
-let eDay = dateObj.getUTCDate();
-let eYear = dateObj.getUTCFullYear();
-let key = "eS6qfDZDKtwmh83Q5oGPjIyiUL3so4NOGVV2ixSH";
-const solarSearch = "https://api.nasa.gov/DONKI/FLR?startDate=" + sYear + '-' + sMonth + '-' + sDay + "&endDate=" + eYear + '-' + eMonth + '-' + eDay + "&api_key=" + key;
+// let sYear = "2018";
+// let sMonth = "01";
+// let sDay = "01";
+// let dateObj = new Date();
+// let eMonth = dateObj.getUTCMonth() + 1; //months from 1-12
+// let eDay = dateObj.getUTCDate();
+// let eYear = dateObj.getUTCFullYear();
+// let key = "eS6qfDZDKtwmh83Q5oGPjIyiUL3so4NOGVV2ixSH";
+// const solarSearch = "https://api.nasa.gov/DONKI/FLR?startDate=" + sYear + '-' + sMonth + '-' + sDay + "&endDate=" + eYear + '-' + eMonth + '-' + eDay + "&api_key=" + key;
+
+
 
 // Require
+const request = require('request');
 const cron = require('node-cron');
 const express = require('express');
 let app = express();
@@ -34,9 +37,7 @@ con.connect(function (err) {
 });
 
 //  Function for downloading API data to JSON file, this can be used as a back up if api call fails to keep site operational
-
 nasaSearch = function () {
-  let request = require('request');
   request(solarSearch, {
     json: true
   }, (err, res, body) => {
@@ -80,3 +81,4 @@ console.log(
 
 
 
+module.export = solarSearch;

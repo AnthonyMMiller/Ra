@@ -116,14 +116,16 @@ x
 
 .sun1 {
 
-  font-size: 150px;
+  font-size: 50px;
   color: #ffc400;
-  margin-right: 10px;
-  margin-bottom: 40px;
+  
+-webkit-animation: fa-spin 3s infinite linear;
+    animation: fa-spin 3s infinite linear; 
 
-    -webkit-animation: fa-spin 6s infinite linear;
-    animation: fa-spin 6s infinite linear;
-
+}
+.sun2 {
+  font-size: 50px;
+  color: #ffc400;
 }
 
 a {
