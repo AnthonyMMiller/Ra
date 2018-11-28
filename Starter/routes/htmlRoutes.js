@@ -11,6 +11,7 @@ module.exports = function(app) {
     });
   });
 
+
   // Load example page and pass in an example by id
   app.get("/signin", function(req, res) {
     db.UserFeeling.findOne({}).then(function(dbExample) {
@@ -28,6 +29,16 @@ module.exports = function(app) {
         });
       });
     });
+
+
+    app.get("/blog", function(req, res) {
+      db.UserFeeling.findOne({}).then(function(dbExample) {
+        res.render("blog", {
+          example: dbExample
+        });
+      });
+    });
+    
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {

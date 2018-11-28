@@ -22,8 +22,8 @@ let mysql = require('mysql');
 const con = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: 'balla456',
-  database: 'ra_db'
+  password: '229535Jkz',
+  database: 'RaUser'
 });
 
 con.connect(function (err) {
@@ -53,13 +53,13 @@ navySearch = function () {
   });
 
   //Cron job for checking navy API for new objects, updates once a year and adds to json file that can update data base with one year worth of moon data
-  cron.schedule('0 1 1 1 *', () => {
-    console.log('Runing a job at 01:00 at America/Los_Angeles timezone');
-    navySearch();
-  }, {
-    scheduled: true,
-    timezone: "America/Los_Angeles"
-  });
+  // cron.schedule('0 1 1 1 *', () => {
+  //   console.log('Runing a job at 01:00 at America/Los_Angeles timezone');
+  //   navySearch();
+  // }, {
+  //   scheduled: true,
+  //   timezone: "America/Los_Angeles"
+  // });
 };
 
  
