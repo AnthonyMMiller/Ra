@@ -13,8 +13,9 @@ module.exports = function (app) {
     db.UserFeeling.findAll({
       where: {
         createdAt: {
-          [db.Op.lt]: new Date(),
+         
           [db.Op.gt]: new Date(new Date() - 24 * 60 * 60 * 1000)
+         
         }
       }
     }).then(function (dbExamples) {

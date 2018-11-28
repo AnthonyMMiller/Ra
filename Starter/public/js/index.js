@@ -8,14 +8,17 @@ var feelings = [];
 // The API object contains methods for each kind of request we'll make
 var API = {
   saveExample: function(example) {
+    console.log("save example ajax : ")
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
       url: "api/UserFeelings",
-      data: JSON.stringify(example)
-    });
+      data: JSON.stringify(example),
+     // success: callback
+    
+    })
   },
   getExamples: function() {
     return $.ajax({
@@ -90,15 +93,23 @@ console.log(example.feeling);
 console.log(example.nasaData);
 
 
-  API.saveExample(example).then(function() {
-    refreshExamples();
+  API.saveExample(example).done(function() {
+   // refreshExamples();
+   // $exampleText.val("");
+    //$exampleDescription.val("");
+    console.log("save example return")
+    window.location.href = '/user';
+
+
   });
+ 
 
 
-  $exampleText.val("");
-  $exampleDescription.val("");
-  window.location.href = '/user';
+ 
 };
+function onsuccessSave(){
+  window.location.href = '/user';
+}
 
 
 var handleDeleteBtnClick = function() {

@@ -1,4 +1,6 @@
 
+$(document).ready(function(){
+
 
 function getUserFeelings() {
   $.get("/api/today", function(data) {
@@ -11,7 +13,7 @@ function getUserFeelings() {
 
 getUserFeelings();
 
-function GetData (Jdata){
+function GetData (Jdata ){
   var test; 
   test = getStats(Jdata);
   romaP = Math.floor((test.Headaches/test.total)*100);
@@ -79,5 +81,5 @@ function getStats(feeling){
  });
   return data;
 }
-
+});
 
