@@ -10,7 +10,6 @@ let key = "eS6qfDZDKtwmh83Q5oGPjIyiUL3so4NOGVV2ixSH";
 const solarSearch = "https://api.nasa.gov/DONKI/FLR?startDate=" + sYear + '-' + sMonth + '-' + sDay + "&endDate=" + eYear + '-' + eMonth + '-' + eDay + "&api_key=" + key;
 
 // Require
-var request = require('request');
 const cron = require('node-cron');
 const express = require('express');
 let app = express();
@@ -35,7 +34,9 @@ con.connect(function (err) {
 });
 
 //  Function for downloading API data to JSON file, this can be used as a back up if api call fails to keep site operational
+
 nasaSearch = function () {
+  let request = require('request');
   request(solarSearch, {
     json: true
   }, (err, res, body) => {
