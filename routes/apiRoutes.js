@@ -1,4 +1,6 @@
 var db = require("../models");
+var moonData = require("../models/JSON_data/navy");
+
 
 module.exports = function (app) {
   // Get all examples
@@ -21,6 +23,11 @@ module.exports = function (app) {
     }).then(function (dbExamples) {
       res.json(dbExamples);
     });
+  });
+
+  //get mooon data for today:
+  app.get("/api/moon", function(req, res) {
+    res.json(moonData);
   });
 
   // Create a new example
