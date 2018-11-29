@@ -203,7 +203,7 @@ function Whatever() {
   
 }
 
-Whatever();
+// Whatever();
 // Add event listeners to the submit and delete buttons
 
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
