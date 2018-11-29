@@ -48,6 +48,7 @@ var API = {
 };
 
 
+
 var todos = [];
 
 // Getting todos from database when page loads

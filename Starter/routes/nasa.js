@@ -51,6 +51,12 @@ nasaSearch = function () {
       }
     });
 
+
+
+
+
+
+
     // Cron job for checking nasa API for new objects once a day
     // cron.schedule('0 1 * * *', () => {
     //   console.log('Runing a job at 01:00 at America/Los_Angeles');
