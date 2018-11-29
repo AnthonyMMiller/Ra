@@ -12,6 +12,26 @@ function getUserFeelings() {
   });
 }
 
+function getMoon(){
+  $.get("/api/moon", function(data){
+      displayMoon(data);
+      console.log(data)
+  });
+};
+getMoon();
+
+function displayMoon(data){
+  var phase;
+  var phaseAR = data[0].phasedata
+  phaseAR.forEach(x => {
+    $("#navy").append("date: " + x.date + " - ");
+    $("#navy").append("phase: " + x.phase);
+    $("#navy").append("<br>");  
+  });
+  
+  //$("#navy").append("phase: " + phaseAR.toString())
+}
+
 getUserFeelings();
 
 function GetData (Jdata ){
