@@ -1,6 +1,7 @@
 
 $(document).ready(function(){
 
+  console.log($email)
 
 function getUserFeelings() {
   $.get("/api/today", function(data) {
