@@ -103,7 +103,7 @@ function getStats(feeling){
       data.Increased++
       break;
 
-    case"Fine": 
+    case"I Feel Fine": 
       data.Fine++
       break;
   }
