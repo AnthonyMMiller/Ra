@@ -3,6 +3,7 @@ var $exampleText = $("#aioConceptName");
 var $exampleDescription = $("#example-description");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
+var $email = $(".email");
 
 
 
@@ -116,7 +117,8 @@ var handleFormSubmit = function(event) {
 
   var example = {
     feeling: $exampleText.val().trim(),
-     nasa: nasaData
+     nasa: nasaData,
+     email: $email.val()
   };
 console.log("index:" + example.feeling);
 // console.log(example.nasaData);
