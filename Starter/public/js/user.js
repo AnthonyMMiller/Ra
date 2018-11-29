@@ -109,20 +109,17 @@ function Whatever() {
         }
       
   
-      // Creating and storing an image tag
-      // var catImage = $("<img>");
-  
-      // Setting the catImage src attribute to imageUrl
-      // catImage.attr("src", imageUrl);
-      // catImage.attr("alt", "cat image");
-  
-      // Prepending the catImage to the images div
-      // $("#images").prepend(catImage);
+    
     });
+
   
 }
 
 Whatever();
+
+
+
+
 
 
 });
