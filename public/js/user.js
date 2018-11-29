@@ -45,6 +45,7 @@ function GetData (Jdata ){
   Sleep = Math.floor((test.Sleep/test.total)*100);
   Anxiety = Math.floor((test.Anxiety/test.total)*100);
   Increased = Math.floor((test.Increased/test.total)*100);
+  Fine = Math.floor((test.Fine/test.total)*100);
   console.log("this should be my  obj with roma #" + test.Headaches);
   
   $(".stats").append(romaP +"% of users are feeling Headaches or migraines today");
@@ -59,6 +60,8 @@ function GetData (Jdata ){
   $(".stats").append(Anxiety +"% of users are feeling Anxiety today");
   $(".stats").append("<br>");
   $(".stats").append(Increased +"% of users are feeling Increased sensitivity today");
+  $(".stats").append("<br>");
+  $(".stats").append(Fine +"% of users are feeling Fine today");
  
 };
 
@@ -71,6 +74,7 @@ function getStats(feeling){
   Sleep:0,
   Anxiety:0,
   Increased:0,
+  Fine:0,
    total:0
  };
  feeling.forEach(x => {
@@ -97,6 +101,10 @@ function getStats(feeling){
 
     case"Increased sensitivity": 
       data.Increased++
+      break;
+
+    case"Fine": 
+      data.Fine++
       break;
   }
  });
