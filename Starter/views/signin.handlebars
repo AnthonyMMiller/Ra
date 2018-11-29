@@ -2,11 +2,31 @@
 </div>
       </div>
 <section class="login">
-  <h1 class="login__title">Sign in / Sign up</h1>
-  <form action="/api/UserFeelings" method="POST" class="form">
-    <input class="form__input email" type="text" placeholder="Your email" />
-    <input class="form__input" type="password" placeholder="Your password" />
-   <button class="form__submit" onclick="location.href = '/user'">GO</button>
+
+  <h1 class="login__title">Put Your Email and Select How You Feel To Keep Track of Your Personal Data</h1>
+  <form action="/auth/signin" method="POST" class="form">
+    <input class="form__input" type="text" placeholder="Your email" />
+    {{!-- <input class="form__input" type="password" placeholder="Tell Ra How You Feel" /> --}}
+   {{!-- <button class="form__submit" onclick="location.href = '/user'">GO</button> --}}
+   <div class="row">
+  <div class="col-12 text-center">
+            
+<select id="aioConceptName" class="dropbtn form__input" >
+         <option>Tell Ra How You Feel</option>
+         <option>Headaches or migraines, the feeling of pressure in your head</option>
+         <option>Hyper-tension (high blood pressure)</option>
+         <option>Dizziness, the jitters or vertigo</option>
+         <option>Sleep Issues</option>
+         <option>Anxiety and worrying</option>
+         <option>Increased sensitivity</option>
+    
+       </select>
+
+
+
+             </div>
+            
+</div>
    
   </form>
   
