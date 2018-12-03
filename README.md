@@ -1,38 +1,20 @@
-# Project Starter
+# Project Ra
+<img width="1129" alt="screen shot 2018-12-02 at 7 32 45 pm" src="https://user-images.githubusercontent.com/39473837/49349740-47b76380-f669-11e8-9ede-ff48d7cd025b.png">   
 
-In this activity we will add the provided boilerplate to group project repos.
+## Outline
 
-## Instructions
+This website allows users to compare how they are feeling with moon and solar information to see if there is a corealation between how they feel and solar and lunar activity. User inputs are stored in a database. The user is able to see how other users are feeling. moon data is imported from a navy api, solar activity is imported from a nasa api. 
 
-* Only one member of each group should complete this activity while the others watch.
+## Technology
+* node-js
+* Handlebars
+* Sequalize
+* mysql
 
-* Copy the entire [Unsolved](Unsolved) folder to another location on your computers &mdash; wherever you would like your local copy of the group project to be.
 
-* Rename the copied "Unsolved" folder to the name of your project.
+## Future improvements
 
-* Open the copied project folder's `package.json` file and change its `name` property to the name of your project.
-
-* CD to the root of the copied project folder with your terminal and run the following commands:
-
-  ```
-  git init
-  git add .
-  git commit -m "Initial commit"
-  ```
-
-* Then copy the GitHub repo's remote SSH URL (the same URL you'd use to clone the repo).
-
-* Run the following commands in your terminal, replacing <remote-url> with your GitHub repo's remote SSH URL.
-
-  ```
-  git remote add origin <remote-url>
-  git push origin master
-  ```
-
-* If completed successfully you should see all of the files uploaded to GitHub.
-
-* All other group members should now clone the repo.
-
-* Discuss as a group:
-
-  * How would you now add changes to this project?
+* Ability for users to log in.
+* Better UI that uses visual graphs to display information instead of numbers.
+* Ability for developers to make api calls to database.
+* More planetary data to compare with.
